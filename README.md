@@ -1,0 +1,1 @@
+# metabase-project-ecs-app-module
