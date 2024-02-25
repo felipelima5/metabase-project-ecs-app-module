@@ -109,3 +109,31 @@ variable "runtime_platform_cpu_architecture" {
 variable "cloudwatch_log_retention_in_days" {
   type = number
 }
+
+variable "container_definitions_image" {
+  type = string
+}
+
+variable "container_definitions_cpu" {
+  type = number
+}
+
+variable "container_definitions_memory" {
+  type = number
+}
+
+variable "container_definitions_memory_reservation" {
+  type = number
+}
+
+variable "container_definitions_essential" {
+  type = bool
+}
+
+variable "region" {
+  type = string
+}
+
+variable "container_definitions_command" {
+  type = string
+}
