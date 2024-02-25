@@ -18,3 +18,20 @@ resource "aws_lb_target_group" "this" {
 
   tags = var.tags
 }
+
+resource "aws_lb_listener" "forward" {
+  load_balancer_arn = var.alb_listener_load_balancer_arn
+  port              = var.alb_listener_port
+  protocol          = var.alb_listener_protocol
+  certificate_arn   = var.alb_listener_certificate_arn
+
+  default_action {
+    type = "fixed-response"
+
+    fixed_response {
+      content_type = "text/plain"
+      message_body = "Fixed response content"
+      status_code  = "503"
+    }
+  }
+}
