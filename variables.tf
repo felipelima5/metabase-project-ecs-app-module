@@ -73,3 +73,7 @@ variable "alb_listener_certificate_arn" {
 variable "alb_listener_host_rule" {
   type = string
 }
+
+variable "bucket_env_name" {
+  type = string
+}
