@@ -5,6 +5,18 @@ resource "aws_iam_role" "execution_role" {
   assume_role_policy = data.aws_iam_policy_document.ecs_task_assume_policy.json
 }
 
+# Trust Relationship
+data "aws_iam_policy_document" "ecs_task_assume_policy" {
+  statement {
+    actions = ["sts:AssumeRole"]
+
+    principals {
+      type        = "Service"
+      identifiers = ["ecs-tasks.amazonaws.com"]
+    }
+  }
+}
+
 #Anexando Policy
 resource "aws_iam_role_policy" "ecs_get_policy" {
   name   = "Policy-TaskDefinition-${random_password.ecs_task_role_name_sufixo.result}"
