@@ -77,3 +77,31 @@ variable "alb_listener_host_rule" {
 variable "bucket_env_name" {
   type = string
 }
+
+variable "requires_compatibilities" {
+  type = string
+}
+
+variable "network_mode" {
+  type = string
+}
+
+variable "cpu" {
+  type = number
+}
+
+variable "memory" {
+  type = number
+}
+
+variable "enable_create_s3_bucket" {
+  type = bool
+}
+
+variable "runtime_platform_operating_system_family" {
+  type = string
+}
+
+variable "runtime_platform_cpu_architecture" {
+  type = string
+}
