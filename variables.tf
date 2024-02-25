@@ -105,3 +105,7 @@ variable "runtime_platform_operating_system_family" {
 variable "runtime_platform_cpu_architecture" {
   type = string
 }
+
+variable "cloudwatch_log_retention_in_days" {
+  type = number
+}

@@ -13,3 +13,10 @@ resource "aws_ecs_task_definition" "this" {
     cpu_architecture        = var.runtime_platform_cpu_architecture
   }
 }
+
+resource "aws_cloudwatch_log_group" "this" {
+  name              = "/ecs/${var.application_name}-svc-application"
+  retention_in_days = var.cloudwatch_log_retention_in_days
+
+  tags = var.tags
+}
