@@ -149,3 +149,31 @@ variable "file_env_name" {
 variable "enable_versioning_configuration" {
   type = string
 }
+
+variable "ecs_cluster_name" {
+  type = string
+}
+
+variable "service_desired_count" {
+  type = number
+}
+
+variable "service_launch_type" {
+  type = string
+}
+
+variable "service_deployment_minimum_healthy_percent" {
+  type = number
+}
+
+variable "service_deployment_maximum_percent" {
+  type = number
+}
+
+variable "subnets_ids" {
+  type = list(string)
+}
+
+variable "service_assign_public_ip" {
+  type = bool
+}
