@@ -1,3 +1,10 @@
+#Role ExecutionRole
+resource "aws_iam_role" "execution_role" {
+  name               = "${var.application_name}-svc-application-${random_password.ecs_task_role_name_sufixo.result}"
+  path               = "/system/"
+  assume_role_policy = data.aws_iam_policy_document.ecs_task_assume_policy.json
+}
+
 #Anexando Policy
 resource "aws_iam_role_policy" "ecs_get_policy" {
   name   = "Policy-TaskDefinition-${random_password.ecs_task_role_name_sufixo.result}"
