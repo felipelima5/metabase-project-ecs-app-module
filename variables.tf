@@ -145,3 +145,7 @@ variable "path_env_name" {
 variable "file_env_name" {
   type = string
 }
+
+variable "enable_versioning_configuration" {
+  type = string
+}
