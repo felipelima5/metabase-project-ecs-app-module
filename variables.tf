@@ -77,3 +77,71 @@ variable "alb_listener_host_rule" {
 variable "bucket_env_name" {
   type = string
 }
+
+variable "requires_compatibilities" {
+  type = string
+}
+
+variable "network_mode" {
+  type = string
+}
+
+variable "cpu" {
+  type = number
+}
+
+variable "memory" {
+  type = number
+}
+
+variable "enable_create_s3_bucket" {
+  type = bool
+}
+
+variable "runtime_platform_operating_system_family" {
+  type = string
+}
+
+variable "runtime_platform_cpu_architecture" {
+  type = string
+}
+
+variable "cloudwatch_log_retention_in_days" {
+  type = number
+}
+
+variable "container_definitions_image" {
+  type = string
+}
+
+variable "container_definitions_cpu" {
+  type = number
+}
+
+variable "container_definitions_memory" {
+  type = number
+}
+
+variable "container_definitions_memory_reservation" {
+  type = number
+}
+
+variable "container_definitions_essential" {
+  type = bool
+}
+
+variable "region" {
+  type = string
+}
+
+variable "container_definitions_command" {
+  type = string
+}
+
+variable "path_env_name" {
+  type = string
+}
+
+variable "file_env_name" {
+  type = string
+}
