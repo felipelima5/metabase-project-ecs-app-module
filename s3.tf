@@ -21,3 +21,13 @@ resource "aws_s3_bucket_object" "object" {
 
   depends_on = [aws_s3_bucket.this]
 }
+
+resource "random_password" "s3_name_sufixo" {
+  length      = 10
+  special     = false
+  upper       = false
+  lower       = false
+  number      = true
+  numeric     = true
+  min_numeric = 10
+}
