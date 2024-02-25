@@ -69,3 +69,7 @@ variable "alb_listener_protocol" {
 variable "alb_listener_certificate_arn" {
   type = string
 }
+
+variable "alb_listener_host_rule" {
+  type = string
+}
