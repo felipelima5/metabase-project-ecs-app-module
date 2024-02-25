@@ -177,3 +177,7 @@ variable "subnets_ids" {
 variable "service_assign_public_ip" {
   type = bool
 }
+
+variable "security_group_alb" {
+  type = list(string)
+}
