@@ -1,3 +1,10 @@
+#Anexando Policy
+resource "aws_iam_role_policy" "ecs_get_policy" {
+  name   = "Policy-TaskDefinition-${random_password.ecs_task_role_name_sufixo.result}"
+  role   = aws_iam_role.execution_role.id
+  policy = data.aws_iam_policy_document.ecs_task_policy.json
+}
+
 #Policy
 data "aws_iam_policy_document" "ecs_task_policy" {
 
