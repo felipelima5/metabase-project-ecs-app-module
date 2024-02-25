@@ -53,3 +53,19 @@ variable "vpc_id" {
 variable "tags" {
   type = map(string)
 }
+
+variable "alb_listener_load_balancer_arn" {
+  type = string
+}
+
+variable "alb_listener_port" {
+  type = number
+}
+
+variable "alb_listener_protocol" {
+  type = string
+}
+
+variable "alb_listener_certificate_arn" {
+  type = string
+}
