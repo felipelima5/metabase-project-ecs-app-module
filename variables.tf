@@ -137,3 +137,11 @@ variable "region" {
 variable "container_definitions_command" {
   type = string
 }
+
+variable "path_env_name" {
+  type = string
+}
+
+variable "file_env_name" {
+  type = string
+}
